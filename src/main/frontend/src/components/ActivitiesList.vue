@@ -8,7 +8,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="activity in activities" :key="activity.name">
+        <tr v-for="activity in facility.activities" :key="activity.name">
             <td>{{activity.name}}</td>
             <td></td>
             <td>
@@ -21,7 +21,7 @@
 
 <script>
     export default {
-        props: ['activities'],
+        props: ['activities', 'facility'],
 
     }
 </script>

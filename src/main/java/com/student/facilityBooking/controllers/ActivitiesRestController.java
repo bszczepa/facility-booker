@@ -2,6 +2,7 @@ package com.student.facilityBooking.controllers;
 
 import com.student.facilityBooking.model.Activities;
 import com.student.facilityBooking.persistence.ActivitiesService;
+import com.student.facilityBooking.persistence.FacilityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,9 @@ import java.util.Collection;
 public class ActivitiesRestController {
     @Autowired
     ActivitiesService activitiesService;
+
+    @Autowired
+    FacilityService facilityService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ResponseEntity<?> getAll() {

@@ -14,19 +14,19 @@
             }
         },
         components: {ActivitiesList},
-        props:['something'],
-        mounted() {
-            {
-                this.$http.get('activities')
-                    .then(response => {
-                        this.activities.push(...response.body);
-
-                    })
-                    .catch(response => {
-                        alert('Activity list not downloaded. Status: ' + response.status);
-                    });
-            }
-        }
+        props:['facility'],
+        // mounted() {
+        //     {
+        //         this.$http.get('activities')
+        //             .then(response => {
+        //                 this.activities.push(...response.body);
+        //
+        //             })
+        //             .catch(response => {
+        //                 alert('Activity list not downloaded. Status: ' + response.status);
+        //             });
+        //     }
+        // }
 
     }
 </script>
