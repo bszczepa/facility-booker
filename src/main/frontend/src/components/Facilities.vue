@@ -8,9 +8,10 @@
     </div>
     
 </template>
-
+K
 <script>
     import FacilitiesList from "./FacilitiesList";
+
 
     export default {
         props: ['username'],
@@ -21,11 +22,9 @@
             }
         },
         methods: {
-            getAll() {
-
-
-
-            }
+            // getAll() {
+            //
+            // }
 
         },
         mounted() {

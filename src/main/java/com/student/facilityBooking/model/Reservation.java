@@ -16,8 +16,8 @@ public class Reservation {
     @Column
     private long price;
 
-//    @Column
-//    private long facilityId;
+    @Column
+    private long activityId;
 
 
     public long getId() { return  id; }
@@ -30,7 +30,7 @@ public class Reservation {
 
 //    public long getFacilityId() { return facilityId; }
 
-//    public long getActivityId() { return activityId; }
+    public long getActivityId() { return activityId; }
 
 
     public void setId(long id) { this.id = id; }
@@ -41,7 +41,7 @@ public class Reservation {
 
 //    public void setFacilityId(long facilityId) { this.facilityId = facilityId; }
 
-//    public void setActivityId(long activityId) { this.activityId = activityId; }
+    public void setActivityId(long activityId) { this.activityId = activityId; }
 
 
 

@@ -17,7 +17,7 @@ public class Facility {
     private long id;
 
     @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="id")
+    @JoinColumn(name="facilityId")
     Set<Activities> activities;
 
 
