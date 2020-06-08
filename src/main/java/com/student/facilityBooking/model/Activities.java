@@ -14,8 +14,11 @@ public class Activities {
     @Column
     private String name;
 
+    @Column
+    private long facilityId;
+
     @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="id")
+    @JoinColumn(name="activityId")
     Set<Reservation> reservations;
 
     public long getId() { return  id; }
@@ -24,13 +27,13 @@ public class Activities {
 
     public Set<Reservation> getReservations() { return reservations; }
 
-//    public long getFacilityId() { return facilityId; }
+    public long getFacilityId() { return facilityId; }
 
     public void setId(long id) { this.id = id; }
 
     public void setName(String name) { this.name = name; }
 
-//    public void setFacilityId(long facilityId) { this.facilityId = facilityId; }
+    public void setFacilityId(long facilityId) { this.facilityId = facilityId; }
 
 }
 
