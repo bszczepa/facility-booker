@@ -38,7 +38,7 @@
 
         methods: {
             toggleActivities() {
-                this.activitiesFlag = true;
+                this.activitiesFlag = !this.activitiesFlag;
                 this.showingActivites =true;
             }
         },

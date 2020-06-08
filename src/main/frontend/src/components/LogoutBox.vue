@@ -13,8 +13,8 @@
     export default {
         props: ['username'],
         methods: {
-            logout() {
-                this.$emit('logMeOut',this.username)
+            logOut() {
+                this.$emit('logoutEvent',this.username)
             }
         },
     }
