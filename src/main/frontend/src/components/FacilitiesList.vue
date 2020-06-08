@@ -12,7 +12,8 @@
             <td>{{facility.name}}</td>
             <td></td>
             <td>
-                <button>Pokaż dostępne aktywności</button>
+                <button @click="toggleActivities()">Pokaż aktywności</button>
+                <activities v-if="activitiesFlag"> </activities>
             </td>
         </tr>
         </tbody>
@@ -22,8 +23,25 @@
 </template>
 
 <script>
+    import Activities from "./Activities";
+    import ActivitiesList from "./ActivitiesList";
     export default {
+        components: {ActivitiesList, Activities},
         props:['facilities'],
+        data() {
+            return {
+                activitiesFlag: false,
+                showingActivities: false,
+            }
+
+        },
+
+        methods: {
+            toggleActivities() {
+                this.activitiesFlag = true;
+                this.showingActivites =true;
+            }
+        },
     }
 </script>
 

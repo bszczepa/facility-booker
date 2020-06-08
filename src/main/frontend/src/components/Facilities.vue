@@ -22,11 +22,9 @@
             }
         },
         methods: {
-            getAll() {
-
-
-
-            }
+            // getAll() {
+            //
+            // }
 
         },
         mounted() {
