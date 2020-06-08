@@ -25,15 +25,14 @@
 
 
 
-
-
             }
 
         },
         mounted() {
             this.$http.get('facilities')
                 .then(response => {
-                    this.facilities(response.body);
+                    this.facilities.push(...response.body);
+
                 })
                 .catch(response => {
                     alert('Facility list not downloaded. Status: ' + response.status);
