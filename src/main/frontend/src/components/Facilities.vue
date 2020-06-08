@@ -23,8 +23,21 @@
         methods: {
             getAll() {
 
+
+
+
+
             }
 
+        },
+        mounted() {
+            this.$http.get('facilities')
+                .then(response => {
+                    this.facilities(response.body);
+                })
+                .catch(response => {
+                    alert('Facility list not downloaded. Status: ' + response.status);
+                });
         }
     }
 </script>
