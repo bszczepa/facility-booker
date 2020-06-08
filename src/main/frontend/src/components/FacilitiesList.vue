@@ -13,7 +13,7 @@
             <td></td>
             <td>
                 <button @click="toggleActivities()">Pokaż aktywności</button>
-                <activities v-if="activitiesFlag"> </activities>
+                <activities v-if="activitiesFlag" :facility="facilities"> </activities>
             </td>
         </tr>
         </tbody>

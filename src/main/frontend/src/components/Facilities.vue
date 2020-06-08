@@ -8,7 +8,7 @@
     </div>
     
 </template>
-
+K
 <script>
     import FacilitiesList from "./FacilitiesList";
 

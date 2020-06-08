@@ -1,6 +1,7 @@
 <template>
     <div>
-        <activities-list :activities="activities"></activities-list>
+        <activities-list :activities="activities"
+                         :facility="facility"></activities-list>
     </div>
     
 </template>
@@ -15,6 +16,7 @@
         },
         components: {ActivitiesList},
         props:['facility'],
+
         // mounted() {
         //     {
         //         this.$http.get('activities')
