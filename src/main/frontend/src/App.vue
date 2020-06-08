@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
     import "milligram";
     import LoginBox from "./components/LoginBox";
     import LogoutBox from "./components/LogoutBox";

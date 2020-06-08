@@ -12,6 +12,7 @@
 <script>
     import FacilitiesList from "./FacilitiesList";
 
+
     export default {
         props: ['username'],
         components: {FacilitiesList},
