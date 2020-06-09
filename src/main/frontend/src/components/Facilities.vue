@@ -3,7 +3,8 @@
         <label>
             Dostępne obiekty: ({{facilities.length}})
         </label>
-        <facilities-list :facilities="facilities"> </facilities-list>
+        <facilities-list :facilities="facilities"
+                         :username="username"> </facilities-list>
 
     </div>
     

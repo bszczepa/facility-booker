@@ -15,7 +15,14 @@
                 <div v-for="activity in facility.activities" :key="facility.activities.name">
                     <div class:="float-right">
                         {{activity.name}}
-                        <button class="button-outline" @click=""> Rezerwuj </button>
+                        <div v-for="reservation in activity.reservations" :key="activity.reservations.id">
+                            {{reservation.date}}
+                            {{reservation.price}}
+                            <button v-if="reserved == false"class="button-outline" @click="reserve(reservation,username)"> Rezerwuj </button>
+                            {{reservation.username}}
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -32,11 +39,13 @@
     import ActivitiesList from "./ActivitiesList";
     export default {
         components: {ActivitiesList, Activities},
-        props:['facilities'],
+        props:['facilities','username'],
         data() {
             return {
                 activitiesFlag: false,
                 showingActivities: false,
+                reserved: false,
+                username: ''
             }
 
         },
@@ -46,11 +55,21 @@
                 this.activitiesFlag = !this.activitiesFlag;
                 this.showingActivites =true;
             },
-            reserve(activity){
+            toggleReservedState(){
+                this.reserved = true;
+            },
+            reserve(reservation, newName) {
+                reservation.username = newName;
+                this.$http.put('reservation/' + reservation.id, reservation)
+                    .then(response => {
+                        // this.reservation.name = username;
+                    })
+                    .catch(response => {
+                        alert('Reservation not saved. Status: ' + response.status);
+                    });
 
-
-
-            }
+                this.toggleReservedState()
+            },
 
         },
     }
