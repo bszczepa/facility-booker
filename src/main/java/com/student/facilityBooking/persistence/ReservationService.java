@@ -27,6 +27,11 @@ public class ReservationService {
         connector.getSession().delete(reservation);
         transaction.commit();
     }
+    public void save(Reservation reservation) {
+        Transaction transaction = connector.getSession().beginTransaction();
+        connector.getSession().merge(reservation);
+        transaction.commit();
+    }
 
 }
 // zrobić logowanie dla usera, dodac columne users w rezerwacji

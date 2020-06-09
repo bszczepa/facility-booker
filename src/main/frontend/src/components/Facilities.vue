@@ -3,7 +3,8 @@
         <label>
             Dostępne obiekty: ({{facilities.length}})
         </label>
-        <facilities-list :facilities="facilities"> </facilities-list>
+        <facilities-list :facilities="facilities"
+                         :username="username"> </facilities-list>
 
     </div>
     
@@ -22,8 +23,8 @@ K
             }
         },
         methods: {
-            // getAll() {
-            //
+            // getActivity(id) {
+            //     this.$http.get('activities/' + )
             // }
 
         },
@@ -36,6 +37,7 @@ K
                 .catch(response => {
                     alert('Facility list not downloaded. Status: ' + response.status);
                 });
+
         }
     }
 </script>

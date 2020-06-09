@@ -12,6 +12,7 @@
         data() {
             return {
                activities: [],
+                facility:[]
             }
         },
         components: {ActivitiesList},

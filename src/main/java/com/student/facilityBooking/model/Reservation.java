@@ -19,10 +19,20 @@ public class Reservation {
     @Column
     private long activityId;
 
+    @Column
+    private String username;
 
     public long getId() { return  id; }
 
-//    public Activities getActivities() { return  activities;}
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    //    public Activities getActivities() { return  activities;}
 
     public java.sql.Time getDate() { return date; }
 
