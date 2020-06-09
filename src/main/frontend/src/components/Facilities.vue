@@ -22,8 +22,8 @@ K
             }
         },
         methods: {
-            // getAll() {
-            //
+            // getActivity(id) {
+            //     this.$http.get('activities/' + )
             // }
 
         },
@@ -36,6 +36,7 @@ K
                 .catch(response => {
                     alert('Facility list not downloaded. Status: ' + response.status);
                 });
+
         }
     }
 </script>

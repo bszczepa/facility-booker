@@ -18,8 +18,8 @@ public class ActivitiesService {
         return connector.getSession().createCriteria(Activities.class).list();
     }
 
-    public Activities findByName(String name) {
-        return (Activities) connector.getSession().get(Activities.class, name);
+    public Activities findById(long id) {
+        return (Activities) connector.getSession().get(Activities.class, id);
     }
 
     public Activities add(Activities activities) {

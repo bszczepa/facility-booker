@@ -1,4 +1,4 @@
-<template>
+<template xmlns:class="http://www.w3.org/1999/xhtml">
     <table v-if="facilities.length > 0">
         <thead>
         <tr>
@@ -12,8 +12,13 @@
             <td>{{facility.name}}</td>
             <td></td>
             <td>
-                <button @click="toggleActivities()">Pokaż aktywności</button>
-                <activities v-if="activitiesFlag" v-for="facility in facilities.slice()" :facility="facility"></activities>
+                <div v-for="activity in facility.activities" :key="facility.activities.name">
+                    <div class:="float-right">
+                        {{activity.name}}
+                        <button class="button-outline" @click=""> Rezerwuj </button>
+                    </div>
+
+                </div>
             </td>
         </tr>
         </tbody>
@@ -40,7 +45,13 @@
             toggleActivities() {
                 this.activitiesFlag = !this.activitiesFlag;
                 this.showingActivites =true;
+            },
+            reserve(activity){
+
+
+
             }
+
         },
     }
 </script>
